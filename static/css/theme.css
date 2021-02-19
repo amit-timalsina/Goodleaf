@@ -154,6 +154,7 @@ li {
 	font-size: 32px;
 	font-size: 2rem;
 	margin-right: 10px;
+	margin-left: 0;
 }
 
 #header .header-column .header-extra-info li .header-extra-info-text label {
@@ -175,7 +176,8 @@ li {
 }
 
 #header .header-column .header-extra-info li .header-extra-info-text a {
-	color: #333;
+	color: white;
+	font-weight: bold;
 }
 
 #header .header-column .header-extra-info li .feature-box p {

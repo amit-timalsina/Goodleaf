@@ -65,7 +65,7 @@
                             </div>
 
                             <div
-                                class="header-nav-features header-nav-features-no-border col-lg-5 col-xl-6 px-0 ml-0">
+                                class="header-nav-features header-nav-features-no-border col-lg-5 col-xl-6 px-0 ml-5 mr-0 mt-3">
                                 <div class="header-nav-feature pr-lg-4 pr-xl-5 mr-0">
                                     <form  action="/search" method="get" >
                                         <div class="search-with-select">
@@ -98,9 +98,10 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="d-flex col-lg-2 pr-0 pl-0 pl-xl-0">
+                            <div class="d-flex col-lg-3 ml-2 pr-0 pl-5 pl-xl-5">
                                 <ul class="header-extra-info">
-                                    <li class="ml-0 ml-xl-0">
+                                    <li class="ml-0 ml-xl-3">
+                                      {% if user.is_authenticated %}
                                         <div class="header-extra-info-icon">
                                           <a href="/" id="btnGroupDrop1" class="a text-decoration-none text-color-dark text-color-hover-primary text-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="icons icon-user"></i>
@@ -111,33 +112,23 @@
                                             <a class="dropdown-item" href="/logout">Log out</a>
                                         </div>
                                         </div>
-                                    </li>
-                                    <li class="mr-2 ml-3">
-                                     
-                                    </li>
-                                </ul>
-                                <div class="header-nav-features pl-0 ml-1">
-                                  {% if user.is_authenticated %}
-                                      <div>
-                                      <a  class=" btn btn-primary btn-primary mb-2"
-                                          style="font-weight: bold;" href = '/ask-question'>Ask  </a>
+                                        <div class="header-extra-info-text">
+                                          <a class="btn btn-primary btn-secondary" href = '/detect'>Detect</a>
                                         </div>
-                                </div>
-                            </div>
-                            
-                            
-                                </div>
-                              
+                                        <div class="header-extra-info-text">
+                                            <a class="btn btn-primary btn-primary ml-4" href = '/ask-question'>Ask</a>
+                                        </div>
+                                      {% else %}
+                                        <div class="header-extra-info-text">
+                                          <a class="btn btn-primary btn-secondary ml-2" href = '/detect'>Detect</a>
+                                        </div>
+                                        <div class="header-extra-info-text">
+                                          <a class="btn btn-primary btn-primary ml-2" data-toggle="modal" data-target="#signupModal">Login</a>
+                                        </div>
+                                      {% endif %}
+                                    </li>
 
-                            {% else %}
-                                <!-- Button to  trigger Login modal -->
-                             
-                              
-                              <button type="button" class="btn btn-success mr-2"  data-toggle="modal" data-target="#signupModal">
-                              Login
-                              </button>
-                            
-                            {% endif %}
+                                </ul>
                         </div>
                     </div>
                 </div>

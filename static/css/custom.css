@@ -4,20 +4,21 @@
         width: 60px;
         height: 30px !important;
     }
+    .header-row .d-flex{
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
     .header-row .d-flex i{
         font-size: 1.2rem;
+    }
+    .header-row .d-flex a{
+        padding: 5px !important;
+        margin-left: 3px !important;
+        margin-right: 0;
     }
     .header-row .d-flex li{
         margin: 0 !important;
         padding: 0 !important;
-    }
-    .header-row .d-flex img {
-        width: 20px !important;
-        height: 20px i !important;
-
-    }
-    .header-row .d-flex {
-        margin-left: 4px !important;
     }
     .header-row button {
         font-size: 0.45rem;
@@ -27,7 +28,8 @@
         overflow: hidden;
     }
     .header-row .search-with-select i {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
+        padding: auto !important;
     }
     .header-row .header-nav-features {
         margin: 0 !important;

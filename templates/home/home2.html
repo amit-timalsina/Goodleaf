@@ -68,14 +68,20 @@
                 </li>
             </ul>
         </div>
-        <div class="col-lg-6 mr-3 mr-1">
+        <div class="col-lg-6 mr-3 ml-3">
             <div class="row mb-2 pt-4 pb-4 box-shadow-1" style="background-color: white; border: 1px solid rgba(99, 99, 99, 0.247)">
                 <div class="col-auto mr-0 pr-0">
                     <img src="{% static 'img/bg-corporate-1-1.jpg' %}" width="40" height="40" style="border-radius: 100%;">
                 </div>
-                <div class="col-auto pl-2 pt-0">
-                    <a class=" btn btn-modern" href="/ask-question">What's is your question?</a>
-                </div>
+                {% if user.is_authenticated %}
+                    <div class="col-auto pl-2 pt-0">
+                        <a class=" btn btn-modern" href="/ask-question">What's is your question?</a>
+                    </div>
+                {% else %}
+                    <div class="col-auto pl-2 pt-0">
+                        <a class=" btn btn-modern" href="/detect">Detect Disease</a>
+                    </div>
+                {% endif %}
                 <!-- Form -->
                 <form id="demo-form" class="white-popup-block mfp-hide">
                     <div class="form-row mt-2">
@@ -227,7 +233,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 ml-2">
+        <div class="col-lg-2 ml-4">
             <div class="card row border-radius-2 bg-color-light box-shadow-1 p-3">
                 <div class="card-body">
                     <h4 class="card-title mb-1 text-4 font-weight-bold">Card Title</h4>
