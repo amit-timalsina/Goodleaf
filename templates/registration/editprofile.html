@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}   My Profle {% endblock title %}
+
+{% block body %}
+<style>
+.body{
+margin:0 20px;
+}
+.btn{
+     box-shadow: 4px 4px 2.5px grey;
+}
+</style>
+<div class="body">
+<center><h1>My Profile</h1></center>
+<br><br>
+<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThdy6Jw1nlTTj7s4460BfEzkkfXnsPZL9Gkw&usqp=CAU"  alt="..." style="width:150px; height:130px;" ></center>
+<div class="form-group">
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+{{form.as_p}}
+<button class="btn">Update Profile</button>
+{% comment %} <a class="btn" href="/view_profile"style="margin-left:40px;"> View Profile</a> {% endcomment %}
+</div>
+</div>
+ {% endblock %}

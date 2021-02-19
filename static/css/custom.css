@@ -1,0 +1,35 @@
+/* Add here all your CSS customizations */
+@media (max-width: 700px) {
+    .header-row img{
+        width: 60px;
+        height: 30px !important;
+    }
+    .header-row .d-flex i{
+        font-size: 1.2rem;
+    }
+    .header-row .d-flex li{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .header-row .d-flex img {
+        width: 20px !important;
+        height: 20px i !important;
+
+    }
+    .header-row .d-flex {
+        margin-left: 4px !important;
+    }
+    .header-row button {
+        font-size: 0.45rem;
+        width: 210px;
+        height: 30px;
+        font-weight: bold;
+        overflow: hidden;
+    }
+    .header-row .search-with-select i {
+        font-size: 1.2rem;
+    }
+    .header-row .header-nav-features {
+        margin: 0 !important;
+    }
+}

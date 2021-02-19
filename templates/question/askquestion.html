@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Blogpost{% endblock title %}
+
+{% block body %}
+<div class="content">
+<style>
+.content{
+    margin:10px 20px;
+}
+.form1{
+  margin:10px 40px;
+}
+</style>
+<div class="container">
+       <center> <h1>Ask a Question</h1>
+        <p>Type your question below. You can also use Markdown to help format your question.</p></center>
+        <form class="" action="ask-question" method="post" class="forms1" style="margin-top: 1.3em;align-items:center;">
+            {% csrf_token %}
+          <div class="form-group">
+    <label for="Question Title">Category</label>
+    <select class="form-control" id="title" name="title" style="box-shadow: 2.5px 2.5px 2.5px grey;">
+      <option>Medical</option>
+      <option>Education</option>
+      <option>Science</option>
+      <option>BLBLA</option>
+      <option>Other</option>
+    </select>
+  </div><br>
+   <div class="form-group">
+    <textarea  name="question" class="form-control" id="question" rows="8" placeholder="Whats your question?" style="box-shadow: 2.5px 2.5px 2.5px grey;" required></textarea>
+  </div><br>
+<div class="form-group">
+    <input type="text" class="form-control" id="posted_by" name="posted_by" autocomplete="off" placeholder="Enter your name ..."style="box-shadow: 2.5px 2.5px 2.5px grey;"required>
+  </div><br>
+  <input type="submit" name="ask"  class="btn btn-primary" value="Ask Question" style="box-shadow: 2.5px 2.5px 2.5px grey;">
+        </form>
+</div>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        </div>
+
+ {% endblock %}

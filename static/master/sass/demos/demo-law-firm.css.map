@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "AAGA,YAAY;AACZ,AACC,OADM,CACN,MAAM,CAAC,UAAU,AAAA,SAAS;AAD3B,OAAO,CAEN,MAAM,CAAC,UAAU,AAAA,MAAM,CAAC;EACvB,UAAU,EAAE,IAAI;CAChB;;AAGF,MAAM,EAAE,SAAS,EAAE,KAAK;EACvB,AAAA,WAAW,CAAC;IACX,OAAO,EAAE,IAAI;GACb;;;AAGF,0BAA0B;AAC1B,AAEE,gBAFc,AACd,aAAa,AAAA,eAAe,CAC5B,QAAQ,CAAC;EACR,UAAU,EAAE,KAAK;EACjB,KAAK,EAAE,IAAI;EACX,GAAG,EAAE,CAAC;EACN,KAAK,EAAE,IAAI;EACX,IAAI,EAAE,CAAC;CASP;;AAhBH,AAQG,gBARa,AACd,aAAa,AAAA,eAAe,CAC5B,QAAQ,CAMP,MAAM,AAAA,SAAS,CAAC;EACf,IAAQ,EAAE,KAAK;EACf,KAAS,EAAE,IAAI;CACf;;AAXJ,AAYG,gBAZa,AACd,aAAa,AAAA,eAAe,CAC5B,QAAQ,CAUP,MAAM,AAAA,SAAS,CAAC;EACf,KAAS,EAAE,KAAK;EAChB,IAAQ,EAAE,IAAI;CACd;;AAfJ,AAiBE,gBAjBc,AACd,aAAa,AAAA,eAAe,CAgB5B,GAAG,CAAC;EACH,eAAe,EAAE,KAAK;CACtB;;AAIH,kBAAkB;AAClB,AACC,YADW,AAAA,oBAAoB,CAC/B,iBAAiB,CAAC;EACjB,MAAM,EAAE,CAAC;EACT,GAAG,EAAE,GAAG;CACR",
+    "sources": [
+        "demo-law-firm.scss",
+        "../config/_imports.scss",
+        "../config/_functions.scss",
+        "../config/_helpers.scss",
+        "../config/_mixins.scss",
+        "../config/_directional.scss",
+        "../config/_variables.scss"
+    ],
+    "names": [],
+    "file": "demo-law-firm.css"
+}

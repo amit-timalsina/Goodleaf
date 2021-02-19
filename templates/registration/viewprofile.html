@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}   My Profle {% endblock title %}
+
+{% block body %}
+<center><h1>My Profile</h1>
+<div class="card mb-3" style="max-width: 600px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{user.profile.profile_pic.url}}" alt="..." alt="..." style="width:200px; height:190px;" >
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{user}}</h5>
+        <p class="card-text">{{user.profile.bio}}</p>
+        
+      </div>
+    </div>
+  </div>
+</div></center>
+ {% endblock %}
