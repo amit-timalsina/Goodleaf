@@ -35,6 +35,7 @@ Another major feature of the Goodleaf is it’s simple yet very informative foru
 `pip3 install -r requirements.txt`
 * Keep all models (model.h5 and model.json) to Forms/machinelearning/models. [Link for models](https://drive.google.com/drive/folders/1qeDUhN-yaSNZ4Ii-N0SDDHfGQE5KrBH5?usp=sharing)
 * Start the server by using python3 manage.py runserver or python manage.py runserver for windows
+* Done
 
 ## Features
 Features of Goodleaf.
