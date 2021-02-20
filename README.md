@@ -27,7 +27,7 @@ The cutting edge deep learning model is at the heart of Goodleaf. It takes the a
 
 But even an impressive technology like this is nothing without an easy to use and pleasant  User Interface. So the UI for Goodleaf is specially built the way it is so that everyone can use it. The UI is very intuitive that everyone can wrap their head around it easily. 
 
-Another major feature of the Goodleaf is it’s simple yet very informative forums. I (Aaryan Regmi, YSC) personally think it is the best part about Goodleaf. The best person who could help you in the time of trouble is a fellow person who does the same thing as you do in day to day life. This feature enables farmers from different geographical features, climate, and most importantly knowledge and experience level to connect with each other.
+Another major feature of the Goodleaf is it’s simple yet very informative forums. I personally think it is the best part about Goodleaf. The best person who could help you in the time of trouble is a fellow person who does the same thing as you do in day to day life. This feature enables farmers from different geographical features, climate, and most importantly knowledge and experience level to connect with each other.
 
 ## Setup
 Describe how to install / setup your local environement / add link to demo version.
