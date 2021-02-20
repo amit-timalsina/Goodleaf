@@ -20,7 +20,7 @@ Farmers globally can interact understanding each other's areas' plant species .
 Along with farming , this can also , in coming times be developed as a portal for Animal Husbandry , Dairy , Interactions  thus giving back to the community a lot of learnings , agriculture related career trainings and ultimately , becoming a shared platform for all the farmers as well as aspirants in the farming sector.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](/images/screenshot.png)
 
 ## Technologies
 The cutting edge deep learning model is at the heart of Goodleaf. It takes the advantages of transfer learning to classify diseased and healthy leaves into 38 categories (which will surely increase in near future) with high accuracy. Not just classify but it also provides solutions to the problems within a few seconds. 
