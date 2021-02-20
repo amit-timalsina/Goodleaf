@@ -3,6 +3,7 @@
 
 ## Table of contents
 * [General info](#general-info)
+* [Scope](#scope)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -12,7 +13,11 @@
 * [Contact](#contact)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+According to FAO more that 60% of the world's population depends on agriculture for survival. When we say it depends on agriculture we mean it depends on farmers, Farmers have been the backbone of our world. However after extensive research No any web portal was found that could link farmers around the world virtually, this was a major problem as this would create boundaries and distance within farmers, To tackle this problem we came up with the idea of Goodleaf, It's a global platform for farmers to come together.
+
+## Scope
+Farmers globally can interact understanding each other's areas' plant species . 
+Along with farming , this can also , in coming times be developed as a portal for Animal Husbandry , Dairy , Interactions  thus giving back to the community a lot of learnings , agriculture related career trainings and ultimately , becoming a shared platform for all the farmers as well as aspirants in the farming sector.
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
