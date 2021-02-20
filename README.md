@@ -41,7 +41,7 @@ Features of Goodleaf.
 * The inexperienced and new farmers can get  a lot of consultings from the experienced ones.
 
 ## Status
-Project is: _in progress_ _constantly updating_ _meeting the needs of farmers all over the world_
+Project is: _in progress-constantly updating-meeting the needs of farmers all over the world_
 
 ## Inspiration
 We are developers from Nepal and our country Nepal is a agriculture based country with over 63% of our economy directly or indirectly depending on Agricilture, Even so we found that there is no proper platform for farmers to discuss their condition, problems and communicate with each other. With the aim to make Farming more efficient we started this project.
