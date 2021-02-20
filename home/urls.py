@@ -35,6 +35,6 @@ urlpatterns = [
     
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='home/password_reset_complete.html'),
      name='password_reset_complete'),
-    path('detect', views.detect, name = 'detect disease'),
-    path('detected', views.detected, name = 'disease detected')
+    #path('detect', views.detect, name = 'detect disease'),
+    #path('detected', views.detected, name = 'disease detected')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

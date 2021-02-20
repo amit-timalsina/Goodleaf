@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig', 
     'blog.apps.BlogConfig',
+    'machinelearning',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER ='jhabinayak006@gmail.com' #sender's email-id 
 EMAIL_HOST_PASSWORD = 'jhabinayak006binayak'#password associated with above email-id 
+
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
+MEDIA_URL = '/media/'

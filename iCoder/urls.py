@@ -21,4 +21,6 @@ urlpatterns = [
     # path('authentication/', include('authentication.urls')),
     path('',include('home.urls')),
     path('blog/',include('blog.urls')),
+    path('detect/', include('machinelearning.urls')),
+    
 ]
