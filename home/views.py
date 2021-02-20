@@ -56,7 +56,10 @@ def askquestion(request):
         except Exception as e:
             return render(request, 'question/askquestion.html', { 'error': 'Something is wrong with the form!' })
     else:
-        return render(request, 'question/askquestion.html', {})
+        if request.user.is_authenticated:
+            return render(request, 'question/askquestion.html', {})
+        else:
+            return redirect("/")
 def viewquestion(request, qid, qslug):
     context = {}
     template_name = 'question/questionpost1.html'
