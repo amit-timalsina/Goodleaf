@@ -13,7 +13,7 @@
 * [Contact](#contact)
 
 ## General info
-According to FAO more that 60% of the world's population depends on agriculture for survival. When we say it depends on agriculture we mean it depends on farmers, Farmers have been the backbone of our world. However after extensive research No any web portal was found that could link farmers around the world virtually, this was a major problem as this would create boundaries and distance within farmers, To tackle this problem we came up with the idea of Goodleaf, It's a global platform for farmers to come together.In the coming days : The site will also look forward to coordinate with various agricultural experts around the world , allowing free consultation services to farmers by experts , providing quick , efficient and effective services to the farmers.In many parts of the world , the farmers donot get effective crop production due to lack of timely consultancy andgrowing process . This site can help combat this problem and ultimately improve agriculture globally
+According to FAO more that 60% of the world's population depends on agriculture for survival. When we say it depends on agriculture we mean it depends on farmers, Farmers have been the backbone of our world. However after extensive research No any web portal was found that could link farmers around the world virtually, this was a major problem as this would create boundaries and distance within farmers, To tackle this problem we came up with the idea of Goodleaf, It's a global platform for farmers to come together and help each other.In the coming days : The site will also look forward to coordinate with various agricultural experts around the world , allowing free consultation services to farmers by experts , providing quick , efficient and effective services to the farmers. In many parts of the world ,the farmers donot get effective crop production due to lack of timely consultancy andgrowing process. This site can help combat this problem and ultimately improve agriculture globally
 
 ## Scope
 Farmers globally can interact understanding each other's areas' plant species . 
@@ -30,8 +30,12 @@ But even an impressive technology like this is nothing without an easy to use an
 Another major feature of the Goodleaf is it’s simple yet very informative forums. I personally think it is the best part about Goodleaf. The best person who could help you in the time of trouble is a fellow person who does the same thing as you do in day to day life. This feature enables farmers from different geographical features, climate, and most importantly knowledge and experience level to connect with each other.
 
 ## Setup
-Install files from requirements.txt
+* Git clone the Github repo
+* Install files from requirements.txt
 `pip3 install -r requirements.txt`
+* Keep all models (model.h5 and model.json) to Forums/machinelearning/models. [Link for models](https://drive.google.com/drive/folders/1qeDUhN-yaSNZ4Ii-N0SDDHfGQE5KrBH5?usp=sharing)
+* Start the server by using python3 manage.py runserver or python manage.py runserver for windows
+* Done!
 
 ## Features
 Features of Goodleaf.
