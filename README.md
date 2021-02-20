@@ -30,7 +30,8 @@ But even an impressive technology like this is nothing without an easy to use an
 Another major feature of the Goodleaf is it’s simple yet very informative forums. I personally think it is the best part about Goodleaf. The best person who could help you in the time of trouble is a fellow person who does the same thing as you do in day to day life. This feature enables farmers from different geographical features, climate, and most importantly knowledge and experience level to connect with each other.
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+Install files from requirements.txt
+`pip3 install -r requirements.txt`
 
 ## Features
 Features of Goodleaf.
