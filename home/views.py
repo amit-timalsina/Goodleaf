@@ -250,3 +250,8 @@ def detect(request):
 
 def detected(request):
     return render(request, 'home/detected.html')
+
+
+def category(request, category):
+    post = Ask2.objects.filter(question_title=category)
+    return render(request, 'home/category.html', {"post" : post})
