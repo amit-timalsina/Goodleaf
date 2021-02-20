@@ -22,18 +22,15 @@ from django.contrib.auth import authenticate
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 import json
+from django.core.files.storage import FileSystemStorage
 from django.core import serializers
 import bleach
 import markdown2
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, JsonResponse
-class UserEditView(generic.UpdateView):
-    form_class=EditProfileForm
-    template_name = 'registration/editprofile.html'
-    success_url = reverse_lazy('edit_success')
-    # fields = ['first_name','username']
-    def get_object(self):
-        return self.request.user
+
+
+
 def edit_success(request):
 
     messages.success(request, "Profile Updated")
@@ -76,7 +73,10 @@ def viewquestion(request, qid, qslug):
             # Assign the current post to the comment
             new_comment.post = post
             # Save the comment to the database
-            new_comment.save()
+            if request.user.is_authenticated:
+                new_comment.save()
+            else:
+                return HttpResponse("You need to Login to post comments")
     else:
         comment_form = CommentForm()
 
@@ -258,11 +258,6 @@ def handelLogout(request):
 def about(request): 
     return render(request, "home/about.html")
 
-def detect(request):
-    return render(request, 'home/detect.html')
-
-def detected(request):
-    return render(request, 'home/detected.html')
 
 
 def category(request, category):

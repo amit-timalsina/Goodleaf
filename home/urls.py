@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from home import views
 from django.contrib.auth import views as auth_views
-from .views import  PasswordChangeView,UserEditView,PasswordResetView
+from .views import  PasswordChangeView,PasswordResetView
 from django.conf import settings
 from django.conf.urls.static import static
 # from django.views.decorators.csrf import csrf_exempt
@@ -21,7 +21,6 @@ urlpatterns = [
     path('logout', views.handelLogout, name="handleLogout"),
     path('password/',PasswordChangeView.as_view(template_name="registration/passwordchange.html")),
     path('view_profile', views.view_profile, name="view_profile"),
-    path('edit_profile',UserEditView.as_view(), name="edit_profile"),
     path('password_success',views.password_success,name="password_success"),
     path('edit_success',views.edit_success,name="edit_success"),
     path('ask-question', views.askquestion),

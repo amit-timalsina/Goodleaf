@@ -98,7 +98,7 @@
         <div class="random1 col-lg-6 mr-3 ml-3">
             <div class="row mb-2 pt-4 pl-3 pb-4 " style="background-color: white; border: 1px solid rgba(99, 99, 99, 0.247)">
                 <div class="col-auto mr-0 pr-0">
-                    <img src="{% static 'img/category' %}" width="40" height="40" style="border-radius: 100%;">
+                    <img src="{% static 'img/iuser.png' %}" width="40" height="40" style="border-radius: 100%;">
                 </div>
                 {% if user.is_authenticated %}
                     <div class="col-auto pl-2 pt-0">
@@ -144,121 +144,24 @@
                     </form> -->
                     
             </div>
+            {% for Ask2 in postss %}
             <div class="card row mb-2 p-4">
                 <div class="row">
-                    <div class="col-auto mr-0 pr-0"><img src="{% static 'img/category' %}" width="30" height="30"
+                    <div class="col-auto mr-0 pr-0"><img src="{% static 'img/iuser.png' %}" width="30" height="30"
                             style="border-radius: 100%;"></div>
                     <div class="col-auto pl-2">
-                        <p>Amit Timalsina</p>
+                        <p>{{Ask2.posted_by}}</p>
                     </div>
                     <div class="col-auto ml-0 pl-0">
-                        <p style="color: rgba(0, 0, 0, 0.212)">January 5</p>
+                        <p style="color: rgba(0, 0, 0, 0.212)">{{Ask2.date_posted}}</p>
                     </div>
                 </div>
-                <a href="#q1">
-                    <h4>Did Amber Heard really cheat on Johnny Depp with Elon Musk? </h4>
+                <a href="/question/{{Ask2.qid}}/{{Ask2.slug}}"">
+                    <h4>{{Ask2.question_text|safe}} </h4>
                 </a>
-                <img class="card-img-top" src="{% static 'img/blog/wide/blog-11.jpg' %}" alt="Card Image">
-                <div class="card-body">
-                    <div data-plugin-readmore data-plugin-options="{
-                                'buttonOpenLabel': 'Read More <i class=\'fas fa-chevron-down text-2 ml-1\'></i>',
-                                'buttonCloseLabel': 'Read Less <i class=\'fas fa-chevron-up text-2 ml-1\'></i>'
-                            }">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Totam placeat dolores, minima
-                            voluptas quo eos, repellat delectus inventore velit. Nulla placeat eius in, alias
-                            architecto magnam aliquid debitis adipisci voluptate. Lorem ipsum, dolor, sit amet
-                            consectetur adipisicing elit. Voluptate, aut. Aspernatur sapiente ad quod perspiciatis
-                            pariatur necessitatibus, omnis, labore dolore minus expedita, suscipit rerum vitae
-                            repellendus quia at aperiam laborum!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto odit quidem
-                            commodi voluptates vitae dolores temporibus itaque labore cumque nobis animi facilis,
-                            quod, nisi laboriosam sit. Veritatis tenetur, commodi.</p>
-                        <div class="readmore-button-wrapper d-none">
-                            <a href="#" class="text-decoration-none">
-                                Read More
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
-            <div class="card row mb-2 p-4">
-                <div class="row">
-                    <div class="col-auto mr-0 pr-0"><img src="{% static 'img/category' %}" width="30" height="30"
-                            style="border-radius: 100%;"></div>
-                    <div class="col-auto pl-2">
-                        <p>{{ postss }}</p>
-                    </div>
-                    <div class="col-auto ml-0 pl-0">
-                        <p style="color: rgba(0, 0, 0, 0.212)">January 5</p>
-                    </div>
-                </div>
-                <a href="#q1">
-                    <h4>Did Amber Heard really cheat on Johnny Depp with Elon Musk? </h4>
-                </a>
-                <img class="card-img-top" src="{% static 'img/blog/wide/blog-11.jpg' %}" alt="Card Image">
-                <div class="card-body">
-                    <div data-plugin-readmore data-plugin-options="{
-                                'buttonOpenLabel': 'Read More <i class=\'fas fa-chevron-down text-2 ml-1\'></i>',
-                                'buttonCloseLabel': 'Read Less <i class=\'fas fa-chevron-up text-2 ml-1\'></i>'
-                            }">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Totam placeat dolores, minima
-                            voluptas quo eos, repellat delectus inventore velit. Nulla placeat eius in, alias
-                            architecto magnam aliquid debitis adipisci voluptate. Lorem ipsum, dolor, sit amet
-                            consectetur adipisicing elit. Voluptate, aut. Aspernatur sapiente ad quod perspiciatis
-                            pariatur necessitatibus, omnis, labore dolore minus expedita, suscipit rerum vitae
-                            repellendus quia at aperiam laborum!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto odit quidem
-                            commodi voluptates vitae dolores temporibus itaque labore cumque nobis animi facilis,
-                            quod, nisi laboriosam sit. Veritatis tenetur, commodi.</p>
-                        <div class="readmore-button-wrapper d-none">
-                            <a href="#" class="text-decoration-none">
-                                Read More
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card row mb-2 p-4">
-                <div class="row">
-                    <div class="col-auto mr-0 pr-0"><img src="{% static 'img/category' %}" width="30" height="30"
-                            style="border-radius: 100%;"></div>
-                    <div class="col-auto pl-2">
-                        <p>Amit Timalsina</p>
-                    </div>
-                    <div class="col-auto ml-0 pl-0">
-                        <p style="color: rgba(0, 0, 0, 0.212)">January 5</p>
-                    </div>
-                </div>
-                <a href="#q1">
-                    <h4>Did Amber Heard really cheat on Johnny Depp with Elon Musk? </h4>
-                </a>
-                {% load static %}
-                <img class="card-img-top" src="{% static 'img/blog/wide/blog-11.jpg' %}" alt="Card Image">
-                <div class="card-body">
-                    <div data-plugin-readmore data-plugin-options="{
-                                'buttonOpenLabel': 'Read More <i class=\'fas fa-chevron-down text-2 ml-1\'></i>',
-                                'buttonCloseLabel': 'Read Less <i class=\'fas fa-chevron-up text-2 ml-1\'></i>'
-                            }">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Totam placeat dolores, minima
-                            voluptas quo eos, repellat delectus inventore velit. Nulla placeat eius in, alias
-                            architecto magnam aliquid debitis adipisci voluptate. Lorem ipsum, dolor, sit amet
-                            consectetur adipisicing elit. Voluptate, aut. Aspernatur sapiente ad quod perspiciatis
-                            pariatur necessitatibus, omnis, labore dolore minus expedita, suscipit rerum vitae
-                            repellendus quia at aperiam laborum!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto odit quidem
-                            commodi voluptates vitae dolores temporibus itaque labore cumque nobis animi facilis,
-                            quod, nisi laboriosam sit. Veritatis tenetur, commodi.</p>
-                        <div class="readmore-button-wrapper d-none">
-                            <a href="#" class="text-decoration-none">
-                                Read More
-                                <i class="fas fa-chevron-down"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <div class="random 1 col-lg-2 ml-4">
             <div class="card row border-radius-2 bg-color-light box-shadow-1 p-3">
