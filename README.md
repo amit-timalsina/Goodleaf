@@ -31,9 +31,9 @@ Show examples of usage:
 
 ## Features
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Desease Detection
+* Gives Solutions and Remidies
+* Helpfull and active community
 
 To-do list:
 * Wow improvement to be done 1
@@ -43,7 +43,7 @@ To-do list:
 Project is: _in progress_
 
 ## Inspiration
-Add here credits. Project inspired by..., based on...
+We are developers from Nepal and our country Nepal is a agriculture based country with over 63% of our economy directly or indirectly depending on Agricilture, Even so we found that there is no proper platform for farmers to discuss their condition, problems and communicate with each other. With the aim to make Farming more efficient we started this project.
 
 ## Contact
 Created by [@YSC](https://www.ysc-recast.org/) - feel free to contact me!
