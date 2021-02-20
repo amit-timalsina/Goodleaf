@@ -46,4 +46,4 @@ Project is: _in progress_
 Add here credits. Project inspired by..., based on...
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by [@YSC](https://www.ysc-recast.org/) - feel free to contact me!
