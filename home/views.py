@@ -144,15 +144,24 @@ def contact(request):
 
 def search(request):
     query=request.GET['query']
+    categ = request.GET["title2"]
     # title1 = request.GET['title2']
     if len(query)>78:
         allPosts=Ask2.objects.none()
     else:
-        allPostsTitle= Ask2.objects.filter(question_title__icontains=query)
-        # allPostsCategory = Ask2.objects.filter(question_title__icontains=category)
-        allPostsAuthor= Ask2.objects.filter(question_text__icontains=query)
-        # allPostsContent =Post.objects.filter(content__icontains=query)
-        allPosts=  allPostsTitle.union(allPostsAuthor)
+        if categ == "all":
+            allPostsTitle= Ask2.objects.filter(question_title__icontains=query)
+            # allPostsCategory = Ask2.objects.filter(question_title__icontains=category)
+            allPostsAuthor= Ask2.objects.filter(question_text__icontains=query)
+            # allPostsContent =Post.objects.filter(content__icontains=query)
+            allPosts=  allPostsTitle.union(allPostsAuthor)
+        else:
+            allPostsTitle= Ask2.objects.filter(question_title__icontains=query, question_title=categ)
+            # allPostsCategory = Ask2.objects.filter(question_title__icontains=category)
+            allPostsAuthor= Ask2.objects.filter(question_text__icontains=query, question_title=categ)
+            # allPostsContent =Post.objects.filter(content__icontains=query)
+            allPosts=  allPostsTitle.union(allPostsAuthor)
+
     if allPosts.count()==0:
         messages.warning(request, "No search results found. Please refine your query.")
     params={'allPosts': allPosts, 'query': query}
