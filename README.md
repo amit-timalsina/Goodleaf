@@ -13,7 +13,7 @@
 * [Contact](#contact)
 
 ## General info
-According to FAO more that 60% of the world's population depends on agriculture for survival. When we say it depends on agriculture we mean it depends on farmers, Farmers have been the backbone of our world. However after extensive research No any web portal was found that could link farmers around the world virtually, this was a major problem as this would create boundaries and distance within farmers, To tackle this problem we came up with the idea of Goodleaf, It's a global platform for farmers to come together.
+According to FAO more that 60% of the world's population depends on agriculture for survival. When we say it depends on agriculture we mean it depends on farmers, Farmers have been the backbone of our world. However after extensive research No any web portal was found that could link farmers around the world virtually, this was a major problem as this would create boundaries and distance within farmers, To tackle this problem we came up with the idea of Goodleaf, It's a global platform for farmers to come together.In the coming days : The site will also look forward to coordinate with various agricultural experts around the world , allowing free consultation services to farmers by experts , providing quick , efficient and effective services to the farmers.In many parts of the world , the farmers donot get effective crop production due to lack of timely consultancy andgrowing process . This site can help combat this problem and ultimately improve agriculture globally
 
 ## Scope
 Farmers globally can interact understanding each other's areas' plant species . 
@@ -35,10 +35,12 @@ Show examples of usage:
 `put-your-code-here`
 
 ## Features
-Features of Goodleaf
-* Desease Detection
-* Gives Solutions and Remidies
-* Helpfull and active community
+Features of Goodleaf.
+* Desease Detection.
+* Gives Solutions and Remidies.
+* Helpfull and active community.
+* Promotion variation in agricultural sector through learnings of different ways of agriculture.
+* The inexperienced and new farmers can get  a lot of consultings from the experienced ones.
 
 ## Status
 Project is: _in progress_
