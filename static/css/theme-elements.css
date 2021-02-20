@@ -2248,18 +2248,18 @@ html body.body .btn:active {
 	background-color: #212529;
 	border-color: #212529;
 }
-.btn-modified {
+.btn-modified, .btn-modified1 {
 	background-color: #212529;
 	border-color: #212529 #212529 #0a0c0d;
 	color: #FFF;
 	font-weight: bold;
 }
-.btn-modified:hover{
+.btn-modified:hover, .btn-modified1:hover{
 	background-color: #32383e;
 	border-color: #383f45 #383f45 #212529;
 	color: #FFF;
 }
-.btn-modified:active, .btn-modified:active{
+.btn-modified:active, .btn-modified1:active, .btn-modified:focus, .btn-modified1:focus{
 	background-color: #000 !important;
 }
 /* Button Light */
@@ -8731,7 +8731,7 @@ html[xmlns] .clearfix {
 }
 
 .box-shadow-2 {
-	box-shadow: 0 15px 30px -15px rgba(0, 0, 0, 0.45);
+	box-shadow: 0 15px 10px -15px rgba(0, 0, 0, 0.45);
 }
 
 .box-shadow-3 {

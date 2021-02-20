@@ -3,173 +3,206 @@
 {% block title %} {{ question.question_title }} {% endblock title %}
 {% block body %}
 <style>
-body{
-    overflow-x:hidden;
-}
-.button{
+  body {
+    overflow-x: hidden;
+  }
+
+  .button {
     color: #fff;
     background-color: #c9302c;
     border-color: #ac2925;
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
-    padding:10px 16px;
-    font-size:18px;
-    border-radius:6px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 6px;
     text-decoration: none;
-}
-.intro{
-    margin:50px 0;
+  }
+
+  .intro {
+    margin: 50px 0;
     border: 1px solid #d9d9d9;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8px;
-}
-span.about{
+  }
+
+  span.about {
     font-size: .8rem;
     color: #9a989a;
     padding-left: 4rem;
     padding-right: 1.5rem;
-}
-.header{
+  }
+
+  .header {
     color: #3c4043;
     display: inline-block;
     font-size: 1.2rem;
     white-space: nowrap;
     padding-left: 1rem;
-}
-img{
-    border-radius:50%;
+  }
+
+  img {
+    border-radius: 50%;
     margin-left: 0.5rem;
-    margin-top:0.5rem
-}
-p{
+    margin-top: 0.5rem
+  }
+
+  p {
     color: #3c4043;
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.4;
-    padding:1rem;
-}
-#btn1{
-    margin:0 0.5rem;
-    margin-bottom:0.5rem;
+    padding: 1rem;
+  }
+
+  #btn1 {
+    margin: 0 0.5rem;
+    margin-bottom: 0.5rem;
     box-shadow: 4px 4px 2.5px grey;
-     {% comment %} box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); {% endcomment %}
-}
-#btn1:active{
-    margin:0 0.5rem;
-    margin-bottom:0.5rem;
-     box-shadow: 2.5px 2.5px 2.5px grey;
-}
-.content-btm{
+
+      {
+      % comment %
+    }
+
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+      {
+      % endcomment %
+    }
+  }
+
+  #btn1:active {
+    margin: 0 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 2.5px 2.5px 2.5px grey;
+  }
+
+  .content-btm {
     position: relative;
     display: inline-flex;
     vertical-align: middle;
-}
-.feed-info{
+  }
+
+  .feed-info {
     margin-bottom: 0;
     font-size: 1rem;
     color: #9a989a;
     padding: -0.8rem 0 !important;
-}
-
+  }
 </style>
 <div class="container">
-<div class="row fa-row">
-  <div class="col-12 col-sm-12 col-md-2 col-lg-2 d-none d-lg-block menu-col">
-  {% comment %} Left Column {% endcomment %}
-  </div>
-<div class="col-12 col-sm-12 col-md-11 col-lg-8 feed-col">
-  <div class="feed">
-    <div class="intro">
-      <div class="feed-header">
-          <a class="navbar-brand" href="#">
-          <img src="https://scontent.fktm3-1.fna.fbcdn.net/v/t1.0-9/117354256_186832119541429_3719388821353578315_n.jpg?_nc_cat=110&ccb=2&_nc_sid=09cbfe&_nc_ohc=cn5vmY8X0BgAX_jE5IP&_nc_ht=scontent.fktm3-1.fna&oh=0349846658706c694f6b16a5df6103a5&oe=603A5013" alt="binayak photo" width="40" height="40" style="margin-left:1rem;"><span class="header">{{question.posted_by }}</span><br><span class="about">High School Student</span>
-            </a>
-      <p class="questiondetails"><span>Posted on <strong>{{ question.date_posted }}</strong></span></p>
-      </div>
-      <div class="feed-content">
-        <div class="question">
-        
-          <p>{{ question.question_text|safe }}</p>
-       
-      </div>
-    <div class="content-btm" style="align-items:center;">
-        <a href="#form2"class="btn btn-success" id="btn1">Answer it</a></center>
-
+  <div class="row fa-row">
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 d-none d-lg-block menu-col">
+      {% comment %} Left Column {% endcomment %}
     </div>
-  </div>
-</div>
-
-<div class="col-12 col-sm-12 col-md-4 col-lg-3 assets-col">
-{% comment %} Right column {% endcomment %}
-
-</div>
-</div>
-</div>
-</div>
-</div>   
-<center>All Answers</center>     
-<div class="">
-
-<div class="container">
-<div class="row fa-row">
-  <div class="col-12 col-sm-12 col-md-2 col-lg-2 d-none d-lg-block menu-col">
-  {% comment %} Left Column {% endcomment %}
-  </div>
-<div class="col-12 col-sm-12 col-md-11 col-lg-8 feed-col">
-  <div class="feed">
-    <div class="intro">
-      <div class="feed-header">
-       {% for comment in comments %}
-        <div class="comments" >
-          <p class="">
+    <div class="col-12 col-sm-12 col-md-11 col-lg-8 feed-col">
+      <div class="feed">
+        <div class="intro">
+          <div class="feed-header">
             <a class="navbar-brand" href="#">
-          <img src="https://www.kindpng.com/picc/m/252-2524695_dummy-profile-image-jpg-hd-png-download.png" alt="binayak photo" width="40" height="40" style="margin-left:1rem;"><span class="header">{{ comment.name }} </span><br>
+              <img
+                src="https://scontent.fktm3-1.fna.fbcdn.net/v/t1.0-9/117354256_186832119541429_3719388821353578315_n.jpg?_nc_cat=110&ccb=2&_nc_sid=09cbfe&_nc_ohc=cn5vmY8X0BgAX_jE5IP&_nc_ht=scontent.fktm3-1.fna&oh=0349846658706c694f6b16a5df6103a5&oe=603A5013"
+                alt="binayak photo" width="40" height="40" style="margin-left:1rem;"><span
+                class="header">{{question.posted_by }}</span><br><span class="about">High School Student</span>
             </a>
-            {% comment %} {% endcomment %}
-            <br>
-            <br>
-            <span class=" text-muted font-weight-normal" style="padding-left:1rem;">
-              Posted on : {{ comment.created_on }}
-            </span>
-          </p>
-          <div  style="padding-left:1rem;">
-          {{ comment.body | linebreaks }}
-          <hr>
-          <center>Here will be upvotes and reply buttons</center>
-          <hr>
+            <p class="questiondetails"><span>Posted on <strong>{{ question.date_posted }}</strong></span></p>
+          </div>
+          <div class="feed-content">
+            <div class="question">
+
+              <p>{{ question.question_text|safe }}</p>
+
+            </div>
+            <div class="content-btm" style="align-items:center;">
+              <a href="#form2" class="btn btn-success" id="btn1">Answer it</a></center>
+
+            </div>
           </div>
         </div>
-        {% endfor %}
-      </div>
-    </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-    <br>
-    <div class="col-md-12 card mb-4   ml-1 " style="box-shadow: 2.5px 2.5px 2.5px grey;margin-right:16px;" id="form2">
-      <div class="card-body" >
-<center><h3>Your answer</h3></center>
- <form method="post" style="margin-top: 1.3em;align-items:center;">        
-<p><label for="id_name">Name:</label> 
-<input type="text" name="name" maxlength="80" required id="id_name" class="form-control" style="box-shadow: 2.5px 2.5px 2.5px grey"></p>
 
-<p><label for="id_body">Body:</label> 
-<textarea name="body" cols="40" rows="10" required id="id_body" class="form-control" style="box-shadow: 2.5px 2.5px 2.5px grey">
-</textarea></p>
-<input type="hidden" name="csrfmiddlewaretoken" value="wDrbGGj7xhT2KFha2r2xuPBPDkpuz9iFjP9fGgiziOCPzvsLvSFNudFV2Mkbbtou">
-          {% csrf_token %}
-          <center><button type="submit" class="btn btn-primary  btn-lg" style="box-shadow: 2.5px 2.5px 2.5px grey">Submit</button></center>
-        </form>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3 assets-col">
+          {% comment %} Right column {% endcomment %}
+
+        </div>
       </div>
     </div>
-            <br><br>
-            {% if error %}
-                <p class="error">{{ error }}</p>
-            {% endif %}
-            
+  </div>
+</div>
+<center>All Answers</center>
+<div class="">
+
+  <div class="container">
+    <div class="row fa-row">
+      <div class="col-12 col-sm-12 col-md-2 col-lg-2 d-none d-lg-block menu-col">
+        {% comment %} Left Column {% endcomment %}
+      </div>
+      <div class="col-12 col-sm-12 col-md-11 col-lg-8 feed-col">
+        <div class="feed">
+          <div class="intro">
+            <div class="feed-header">
+              {% for comment in comments %}
+              <div class="comments">
+                <p class="">
+                  <a class="navbar-brand" href="#">
+                    <img src="https://www.kindpng.com/picc/m/252-2524695_dummy-profile-image-jpg-hd-png-download.png"
+                      alt="binayak photo" width="40" height="40" style="margin-left:1rem;"><span class="header">{{
+                      comment.name }} </span><br>
+                  </a>
+                  {% comment %} {% endcomment %}
+                  <br>
+                  <br>
+                  <span class=" text-muted font-weight-normal" style="padding-left:1rem;">
+                    Posted on : {{ comment.created_on }}
+                  </span>
+                </p>
+                <div style="padding-left:1rem;">
+                  {{ comment.body | linebreaks }}
+                  <hr>
+                  <center>Here will be upvotes and reply buttons</center>
+                  <hr>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
         </div>
-  
-    </body>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="col-md-12 card mb-4   ml-1 " style="box-shadow: 2.5px 2.5px 2.5px grey;margin-right:16px;" id="form2">
+  <div class="card-body">
+    <center>
+      <h3>Your answer</h3>
+    </center>
+    <form method="post" style="margin-top: 1.3em;align-items:center;">
+      <p><label for="id_name">Name:</label>
+        <input type="text" name="name" maxlength="80" required id="id_name" class="form-control"
+          style="box-shadow: 2.5px 2.5px 2.5px grey">
+      </p>
+
+      <p><label for="id_body">Body:</label>
+        <textarea name="body" cols="40" rows="10" required id="id_body" class="form-control"
+          style="box-shadow: 2.5px 2.5px 2.5px grey">
+</textarea>
+      </p>
+      <input type="hidden" name="csrfmiddlewaretoken"
+        value="wDrbGGj7xhT2KFha2r2xuPBPDkpuz9iFjP9fGgiziOCPzvsLvSFNudFV2Mkbbtou">
+      {% csrf_token %}
+      <center><button type="submit" class="btn btn-primary  btn-lg"
+          style="box-shadow: 2.5px 2.5px 2.5px grey">Submit</button></center>
+    </form>
+  </div>
+</div>
+<br><br>
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+</div>
+
+</body>
+
 </html>
 {% endblock %}

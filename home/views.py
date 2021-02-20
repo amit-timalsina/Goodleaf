@@ -59,7 +59,7 @@ def askquestion(request):
         return render(request, 'question/askquestion.html', {})
 def viewquestion(request, qid, qslug):
     context = {}
-    template_name = 'question/questionpost.html'
+    template_name = 'question/questionpost1.html'
     post = Ask2.objects.get(qid=qid, slug=qslug)
     comments = post.comments.filter(active=False)
     new_comment = None
