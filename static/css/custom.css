@@ -41,7 +41,7 @@
         margin-left: 0 !important;
     }
     .custom-title-box{
-        margin-left: 4rem !important;
+        margin-left: 3rem !important;
     }
     .random1{
         margin-left: 4px !important;
@@ -97,5 +97,5 @@
 }
 .custom-title-box h1{
     font-weight: bold;
-    font-size: 2.5rem !important;
+    font-size: 1.5rem !important;
 }
