@@ -4,6 +4,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.utils.timezone import now
+from ckeditor_uploader.fields import RichTextUploadingField
+
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField()
@@ -29,7 +31,7 @@ class Profile(models.Model):
 class Ask2(models.Model):
     qid = models.AutoField(primary_key=True)
     question_title = models.CharField(max_length=100)
-    question_text = models.TextField(max_length=50000)
+    question_text = RichTextUploadingField(blank=True, null=True)
     date_posted = models.DateTimeField(auto_now_add=True)
     posted_by = models.TextField(max_length=20)
     slug = models.SlugField(max_length=40)
@@ -45,7 +47,7 @@ class Comment(models.Model):
     post = models.ForeignKey(Ask2,on_delete=models.CASCADE,related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
-    body = models.TextField()
+    body = RichTextUploadingField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
 

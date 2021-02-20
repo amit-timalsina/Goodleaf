@@ -42,7 +42,7 @@
             <div class="col-lg-7 mt-4" style="text-align: justify;">
                 <div class="card row mb-2 p-4">
                     <div class="row">
-                        <div class="col-auto mr-0 pr-0"><img src="{% static 'img/bg-corporate-1-1.jpg' %}" width="30" height="30"
+                        <div class="col-auto mr-0 pr-0"><img src="{% static 'img/category' %}" width="30" height="30"
                                 style="border-radius: 100%;"></div>
                         <div class="col-auto pl-2">
                             <p>Amit Timalsina</p>
@@ -58,7 +58,7 @@
                 {% for comment in comments %}
                 <div class="card row mb-2 p-4">
                     <div class="row">
-                        <div class="col-auto mr-0 pr-0"><img src="{% static 'img/bg-corporate-1-1.jpg' %}" width="30" height="30"
+                        <div class="col-auto mr-0 pr-0"><img src="{% static 'img/category' %}" width="30" height="30"
                                 style="border-radius: 100%;"></div>
                         <div class="col-auto pl-2">
                             <p>{{ comment.name }}</p>
@@ -95,9 +95,10 @@
                           <input type="text" name="name" maxlength="80" required id="id_name" class="form-control">
                         </p>
                   
-                        <p><label for="id_body">Body:</label>
-                        <textarea name="body" cols="40" rows="10" required id="id_body" class="form-control"></textarea>
-                        </p>
+                        <div class="django-ckeditor-widget" data-field-id="id_body" style="display: block;">
+                        <textarea cols="40" id="id_body" name="body" rows="10" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: 835, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_body" data-type="ckeditortype">
+                         </textarea>
+                        </div>
                         <input type="hidden" name="csrfmiddlewaretoken" value = 'wDrbGGj7xhT2KFha2r2xuPBPDkpuz9iFjP9fGgiziOCPzvsLvSFNudFV2Mkbbtou"'>
                         {% csrf_token %}
                         <center><button type="submit" class="btn btn-primary btn-lg">Submit</button></center>
