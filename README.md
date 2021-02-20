@@ -20,7 +20,10 @@ Farmers globally can interact understanding each other's areas' plant species .
 Along with farming , this can also , in coming times be developed as a portal for Animal Husbandry , Dairy , Interactions  thus giving back to the community a lot of learnings , agriculture related career trainings and ultimately , becoming a shared platform for all the farmers as well as aspirants in the farming sector.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Upload-Page](/images/screenshot.png)
+![Another-Thing](/images/screenshot2.png)
+![Another-Thing](/images/screenshot3.png)
+
 
 ## Technologies
 The cutting edge deep learning model is at the heart of Goodleaf. It takes the advantages of transfer learning to classify diseased and healthy leaves into 38 categories (which will surely increase in near future) with high accuracy. Not just classify but it also provides solutions to the problems within a few seconds. 
@@ -33,7 +36,7 @@ Another major feature of the Goodleaf is it’s simple yet very informative foru
 * Git clone the Github repo
 * Install files from requirements.txt
 `pip3 install -r requirements.txt`
-* Keep all models (model.h5 and model.json) to Forum/machinelearning/models. [Link for models](https://drive.google.com/drive/folders/1qeDUhN-yaSNZ4Ii-N0SDDHfGQE5KrBH5?usp=sharing)
+* Keep all models to Forum/machinelearning/models. [Link for models](https://drive.google.com/drive/folders/1qeDUhN-yaSNZ4Ii-N0SDDHfGQE5KrBH5?usp=sharing)
 * Start the server by using 
 `python3 manage.py runserver`
   or   
