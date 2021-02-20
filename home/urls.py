@@ -25,6 +25,7 @@ urlpatterns = [
     path('password_success',views.password_success,name="password_success"),
     path('edit_success',views.edit_success,name="edit_success"),
     path('ask-question', views.askquestion),
+    path("category/<slug:category>", views.category),
     path('question/<int:qid>/<slug:qslug>', views.viewquestion),
     path('password_reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='home/password_reset_done.html'),
      name='password_reset_done'),
