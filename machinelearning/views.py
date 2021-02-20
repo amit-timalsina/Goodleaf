@@ -12,11 +12,10 @@ def prediction(req):
     img = req.FILES["filepath"]
     fs = FileSystemStorage()
     f = fs.save(img.name, img)
-    imglo = fs.url(f)
-    prediction = predict(df, imglo)
+    prediction = predict(df, img.name)
     categ = prediction[3]
     categ = categ.lower()
     post = Ask2.objects.filter(question_title=categ)
     print(categ)
     print(post)
-    return render(req, 'ai/detected.html', {'filepath': imglo, "name" : prediction[0], "symptom" : prediction[1], "remedy" : prediction[2], "post":post})
+    return render(req, 'ai/detected.html', {'filepath': fs.url(f), "name" : prediction[0], "symptom" : prediction[1], "remedy" : prediction[2], "post":post})

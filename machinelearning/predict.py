@@ -31,7 +31,7 @@ model = load_model(model_dir)
 df = pd.read_csv(csv_dir)
 
 def predict(df, img):
-    img = augment_image("/home/amit/projects/KU/forum" + img)
+    img = augment_image(settings.MEDIA_ROOT + "/" + img)
     pred = model.predict(img)
     disease = np.where(pred == pred.max())[1][0]
     output = [df.loc[disease].Disease, df.loc[disease].Symptom, df.loc[disease].Treatment, df.loc[disease].Category]
