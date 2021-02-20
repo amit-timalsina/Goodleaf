@@ -208,8 +208,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER ='jhabinayak006@gmail.com' #sender's email-id 
-EMAIL_HOST_PASSWORD = 'jhabinayak006binayak'#password associated with above email-id 
+EMAIL_HOST_USER ='tempmail.ysc@gmail.com' #sender's email-id 
+EMAIL_HOST_PASSWORD = 'yscrecast'#password associated with above email-id 
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'

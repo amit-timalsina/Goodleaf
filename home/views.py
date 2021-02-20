@@ -111,7 +111,6 @@ def password_success(request):
     return redirect("home")
 def home(request): 
     postss=Ask2.objects.all()
-    print(postss)
     context = {'postss':postss}
     return render(request, "home/home2.html", context)   
 def view_profile(request): 

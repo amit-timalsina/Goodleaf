@@ -466,6 +466,7 @@ h6 span{
                       <h4 class="mb-4 pb-3">Log In</h4>
 {% csrf_token %}
 <form action="/login" method="post" >
+  {% csrf_token %}
                       <div class="form-group">
                         <input type="text" id="loginusername" name="loginusername" class="form-style" placeholder="Username" id="logemail" autocomplete="off" required>
                         <i class="input-icon uil uil-user"></i>
@@ -491,6 +492,7 @@ h6 span{
                       <h4 class="mb-4 pb-3" id="signup">Sign Up</h4>
 {% csrf_token %}
 <form action="/signup" method="post" >
+  {% csrf_token %}
                       <div class="form-group">
                         <input type="text" name="username" class="form-style" placeholder="Choose a unique username" id="username" autocomplete="off" required>
                         <i class="input-icon uil uil-user"></i>
@@ -503,6 +505,7 @@ h6 span{
                         <input type="text" name="fname" class="form-style" placeholder="First Name" id="fname" autocomplete="off" required>
                        <i class="input-icon uil uil-user"></i>
                       </div>
+                      {% csrf_token %}
                       <div class="form-group mt-2">
                         <input type="password" name="pass1" class="form-style" placeholder="Your Password" id="pass1" autocomplete="off" required>
                         <i class="input-icon uil uil-lock-alt"></i>
