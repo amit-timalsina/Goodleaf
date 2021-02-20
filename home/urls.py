@@ -20,7 +20,7 @@ urlpatterns = [
     path('login', views.handleLogin, name="handleLogin"),
     path('logout', views.handelLogout, name="handleLogout"),
     path('password/',PasswordChangeView.as_view(template_name="registration/passwordchange.html")),
-    path('view_profile', views.view_profile, name="view_profile"),
+    # path('view_profile', views.view_profile, name="view_profile"),
     path('password_success',views.password_success,name="password_success"),
     path('edit_success',views.edit_success,name="edit_success"),
     path('ask-question', views.askquestion),

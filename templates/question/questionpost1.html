@@ -47,7 +47,7 @@
                         <div class="col-auto mr-0 pr-0"><img src="{% static 'img/iuser.png' %}" width="30" height="30"
                                 style="border-radius: 100%;"></div>
                         <div class="col-auto pl-2">
-                            <p>Amit Timalsina</p>
+                            <p>{{ question.posted_by }}</p>
                         </div>
                         <div class="col-auto ml-0 pl-0">
                             <p style="color: rgba(0, 0, 0, 0.212)">{{ question.date_posted }}</p>
@@ -69,9 +69,6 @@
                             <p style="color: rgba(0, 0, 0, 0.212)">{{ comment.created_on }}</p>
                         </div>
                     </div>
-                    <a href="#q1">
-                        <h4>{{ question.question_title }}</h4>
-                    </a>
                     {% load static %}
                     <!-- <img class="card-img-top" src="{% static 'img/blog/wide/blog-11.jpg' %}" alt="Card Image"> -->
                     <div class="card-body">
@@ -104,7 +101,7 @@
 
                         <input type="hidden" name="csrfmiddlewaretoken" value = 'wDrbGGj7xhT2KFha2r2xuPBPDkpuz9iFjP9fGgiziOCPzvsLvSFNudFV2Mkbbtou"'>
                         {% csrf_token %}
-                        <center><button type="submit" class="btn btn-primary btn-lg">Submit</button></center>
+                        <center><button type="submit" class="btn btn-primary btn-lg mt-4">Submit</button></center>
                       </form>
                 </div>
             </div>
