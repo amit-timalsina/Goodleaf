@@ -30,14 +30,10 @@ Show examples of usage:
 `put-your-code-here`
 
 ## Features
-List of features ready and TODOs for future development
+Features of Goodleaf
 * Desease Detection
 * Gives Solutions and Remidies
 * Helpfull and active community
-
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
 
 ## Status
 Project is: _in progress_
