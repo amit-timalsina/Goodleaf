@@ -2,6 +2,7 @@
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.models import User 
 from blog.models import Profile,Comment
+from ckeditor_uploader.fields import RichTextUploadingField
 from django import forms
 
 class EditProfileForm(UserChangeForm):
@@ -18,6 +19,7 @@ class EditProfileForm(UserChangeForm):
         model =   Profile
         fields = ('username','email','first_name','password','profile_pic')
 class CommentForm(forms.ModelForm):
+    body = RichTextUploadingField()
     class Meta:
         model = Comment
         fields = ('name','body')

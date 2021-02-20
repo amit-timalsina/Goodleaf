@@ -37,6 +37,8 @@
 
 
 {% block body %}
+<script src="/static/ckeditor/ckeditor-init.js" data-ckeditor-basepath="/static/ckeditor/ckeditor/" id="ckeditor-init-script"></script>
+<script src="/static/ckeditor/ckeditor/ckeditor.js"></script>
     <div class="body">
         <center>
             <div class="col-lg-7 mt-4" style="text-align: justify;">
@@ -51,7 +53,7 @@
                             <p style="color: rgba(0, 0, 0, 0.212)">{{ question.date_posted }}</p>
                         </div>
                     </div>
-                        <h4 style="text-align: justify;">{{ question.question_text }}</h4>
+                        <h4 style="text-align: justify;">{{ question.question_text|safe }}</h4>
                         <a class="btn btn-modified1 mt-2" href = '#form2' style="width: 6rem;" data-hash>Answer</a>
                 </div>
                 <h3 style="margin: 1rem; text-align: center;">All answers:</h3>
@@ -68,16 +70,16 @@
                         </div>
                     </div>
                     <a href="#q1">
-                        <h4>{{ question.question_text }}</h4>
+                        <h4>{{ question.question_title }}</h4>
                     </a>
                     {% load static %}
-                    <img class="card-img-top" src="{% static 'img/blog/wide/blog-11.jpg' %}" alt="Card Image">
+                    <!-- <img class="card-img-top" src="{% static 'img/blog/wide/blog-11.jpg' %}" alt="Card Image"> -->
                     <div class="card-body">
                         <div data-plugin-readmore data-plugin-options="{
                                     'buttonOpenLabel': 'Read More <i class=\'fas fa-chevron-down text-2 ml-1\'></i>',
                                     'buttonCloseLabel': 'Read Less <i class=\'fas fa-chevron-up text-2 ml-1\'></i>'
                                 }">
-                            <p>{{ comment.body }}</p>
+                            <p>{{ comment.body|safe }}</p>
                             <div class="readmore-button-wrapper d-none">
                                 <a href="#" class="text-decoration-none">
                                     Read More
@@ -94,11 +96,12 @@
                         <p><label for="id_name">Name:</label>
                           <input type="text" name="name" maxlength="80" required id="id_name" class="form-control">
                         </p>
-                  
-                        <div class="django-ckeditor-widget" data-field-id="id_body" style="display: block;">
-                        <textarea cols="40" id="id_body" name="body" rows="10" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: 835, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_body" data-type="ckeditortype">
-                         </textarea>
+                        <label for="id_body">Body:</label>
+                        
+                        <div class="django-ckeditor-widget" data-field-id="id_body" style="display: inline-block;">
+                            <textarea cols="40" id="id_body" name="body" rows="10" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;YourCustomToolbarConfig&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;100%&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;toolbar_YourCustomToolbarConfig&quot;: [{&quot;name&quot;: &quot;document&quot;, &quot;items&quot;: [&quot;Source&quot;, &quot;-&quot;, &quot;Save&quot;, &quot;NewPage&quot;, &quot;Preview&quot;, &quot;Print&quot;, &quot;-&quot;, &quot;Templates&quot;]}, {&quot;name&quot;: &quot;clipboard&quot;, &quot;items&quot;: [&quot;Cut&quot;, &quot;Copy&quot;, &quot;Paste&quot;, &quot;PasteText&quot;, &quot;PasteFromWord&quot;, &quot;-&quot;, &quot;Undo&quot;, &quot;Redo&quot;]}, {&quot;name&quot;: &quot;editing&quot;, &quot;items&quot;: [&quot;Find&quot;, &quot;Replace&quot;, &quot;-&quot;, &quot;SelectAll&quot;]}, {&quot;name&quot;: &quot;forms&quot;, &quot;items&quot;: [&quot;Form&quot;, &quot;Checkbox&quot;, &quot;Radio&quot;, &quot;TextField&quot;, &quot;Textarea&quot;, &quot;Select&quot;, &quot;Button&quot;, &quot;ImageButton&quot;, &quot;HiddenField&quot;]}, &quot;/&quot;, {&quot;name&quot;: &quot;basicstyles&quot;, &quot;items&quot;: [&quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;Subscript&quot;, &quot;Superscript&quot;, &quot;-&quot;, &quot;RemoveFormat&quot;]}, {&quot;name&quot;: &quot;paragraph&quot;, &quot;items&quot;: [&quot;NumberedList&quot;, &quot;BulletedList&quot;, &quot;-&quot;, &quot;Outdent&quot;, &quot;Indent&quot;, &quot;-&quot;, &quot;Blockquote&quot;, &quot;CreateDiv&quot;, &quot;-&quot;, &quot;JustifyLeft&quot;, &quot;JustifyCenter&quot;, &quot;JustifyRight&quot;, &quot;JustifyBlock&quot;, &quot;-&quot;, &quot;BidiLtr&quot;, &quot;BidiRtl&quot;, &quot;Language&quot;]}, {&quot;name&quot;: &quot;links&quot;, &quot;items&quot;: [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;]}, {&quot;name&quot;: &quot;insert&quot;, &quot;items&quot;: [&quot;Image&quot;, &quot;Media&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;, &quot;Smiley&quot;, &quot;SpecialChar&quot;, &quot;PageBreak&quot;, &quot;Iframe&quot;]}, &quot;/&quot;, {&quot;name&quot;: &quot;styles&quot;, &quot;items&quot;: [&quot;Styles&quot;, &quot;Format&quot;, &quot;Font&quot;, &quot;FontSize&quot;]}, {&quot;name&quot;: &quot;colors&quot;, &quot;items&quot;: [&quot;TextColor&quot;, &quot;BGColor&quot;]}, {&quot;name&quot;: &quot;tools&quot;, &quot;items&quot;: [&quot;ShowBlocks&quot;]}, &quot;/&quot;, {&quot;name&quot;: &quot;yourcustomtools&quot;, &quot;items&quot;: [&quot;Preview&quot;, &quot;Maximize&quot;]}], &quot;tabSpaces&quot;: 4, &quot;toolbarCanCollapse&quot;: true, &quot;extraPlugins&quot;: &quot;uploadimage,iframe,autolink,autoembed,embedsemantic,autogrow,widget,lineutils,clipboard,dialog,dialogui,elementspath&quot;, &quot;filebrowserUploadUrl&quot;: &quot;/ckeditor/upload/&quot;, &quot;filebrowserBrowseUrl&quot;: &quot;/ckeditor/browse/&quot;, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_body" data-type="ckeditortype"></textarea>
                         </div>
+
                         <input type="hidden" name="csrfmiddlewaretoken" value = 'wDrbGGj7xhT2KFha2r2xuPBPDkpuz9iFjP9fGgiziOCPzvsLvSFNudFV2Mkbbtou"'>
                         {% csrf_token %}
                         <center><button type="submit" class="btn btn-primary btn-lg">Submit</button></center>

@@ -85,11 +85,11 @@ def viewquestion(request, qid, qslug):
     question_json['qid'] = question.qid
     question_json['question_text'] = bleach.clean(markdown2.markdown(question_json['question_text']), tags=['p', 'pre','code', 'sup', 'strong', 'hr', 'sub', 'a'])
     context['question'] = question_json
-    context['answers'] = []
-    answers = Comment.objects.filter(qid=qid)
-    for answer in answers:
-        answer.answer_text = bleach.clean(markdown2.markdown(answer.answer_text), tags=['p', 'pre','code', 'sup', 'strong', 'hr', 'sub', 'a'])
-        context['answers'].append(answer)
+    # context['answers'] = []
+    # answers = Comment.objects.filter(qid=qid)
+    # for answer in answers:
+    #     answer.answer_text = bleach.clean(markdown2.markdown(answer.answer_text), tags=['p', 'pre','code', 'sup', 'strong', 'hr', 'sub', 'a'])
+    #     context['answers'].append(answer)
     return render(request, template_name, {'post': post,
                                             'question':question,
                                            'comments': comments,
@@ -108,8 +108,9 @@ def password_success(request):
     return redirect("home")
 def home(request): 
     postss=Ask2.objects.all()
+    print(postss)
     context = {'postss':postss}
-    return render(request, "home/home2.html",context)   
+    return render(request, "home/home2.html", context)   
 def view_profile(request): 
     return render(request, "registration/viewprofile.html")
 # def home2(request):

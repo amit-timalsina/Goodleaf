@@ -36,6 +36,7 @@ urlpatterns = [
     
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='home/password_reset_complete.html'),
      name='password_reset_complete'),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     #path('detect', views.detect, name = 'detect disease'),
     #path('detected', views.detected, name = 'disease detected')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
