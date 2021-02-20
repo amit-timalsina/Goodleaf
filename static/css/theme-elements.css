@@ -2195,6 +2195,7 @@ html body.body .btn:active {
 	background-color: #212529;
 	border-color: #212529 #212529 #0a0c0d;
 	color: #FFF;
+	font-weight: bold;
 }
 
 .btn-dark:hover, .btn-dark.hover {
@@ -2247,7 +2248,20 @@ html body.body .btn:active {
 	background-color: #212529;
 	border-color: #212529;
 }
-
+.btn-modified {
+	background-color: #212529;
+	border-color: #212529 #212529 #0a0c0d;
+	color: #FFF;
+	font-weight: bold;
+}
+.btn-modified:hover{
+	background-color: #32383e;
+	border-color: #383f45 #383f45 #212529;
+	color: #FFF;
+}
+.btn-modified:active, .btn-modified:active{
+	background-color: #000 !important;
+}
 /* Button Light */
 html body .btn-light,
 html body .btn-outline.btn-light {

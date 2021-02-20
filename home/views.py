@@ -244,3 +244,9 @@ def handelLogout(request):
 
 def about(request): 
     return render(request, "home/about.html")
+
+def detect(request):
+    return render(request, 'home/detect.html')
+
+def detected(request):
+    return render(request, 'home/detected.html')

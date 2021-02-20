@@ -34,4 +34,58 @@
     .header-row .header-nav-features {
         margin: 0 !important;
     }
+    .btn-modified {
+        margin-left: 8rem !important;
+    }
+    .random{
+        margin-left: 0 !important;
+    }
+    .custom-title-box{
+        margin-left: 4rem !important;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+    .btn-modified {
+        margin-left: 20rem !important;
+    }
+    .custom-title-box{
+        margin-left: 15rem !important;
+    }
+    .random{
+        margin-left: 4rem !important;
+    }
+}
+@media (min-width: 800px) and (max-width: 1100px) {
+    .btn-modified {
+        margin-left: 28rem !important;
+    }
+}
+.custom-btn-style-1, .custom-btn-style-1:active {
+	background: rgb(0, 49, 68);
+	border: none;
+	border-radius: 50px !important;
+	padding: 13px 20px;
+	font-size: 15px;
+	font-weight: bold;
+    text-transform: uppercase;
+	transition: ease all 300ms; 
+    color: #fff;
+    margin-left: 3.5rem;
+}
+
+.custom-btn-style-1:hover {
+	opacity: 0.9;
+    color: #fff;
+}
+.custom-title-box a {
+	float: center;
+}
+.custom-title-box{
+    margin-top: 6rem;
+    margin-left: 5rem;
+}
+.custom-title-box h1{
+    font-weight: bold;
+    font-size: 2.5rem !important;
 }

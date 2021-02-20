@@ -103,10 +103,10 @@
                                     <li class="ml-0 ml-xl-3">
                                       {% if user.is_authenticated %}
                                         <div class="header-extra-info-icon">
-                                          <a href="/" id="btnGroupDrop1" class="a text-decoration-none text-color-dark text-color-hover-primary text-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <a id="btnGroupDrop1" aria-labelledby="btnGroupDrop1" class="a text-decoration-none text-color-dark text-color-hover-primary text-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="icons icon-user"></i>
                                           </a>
-                                          <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                                          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                             <a class="dropdown-item" href="/edit_profile">My profile</a>
                                             <a class="dropdown-item" href="/password">Change Password</a>
                                             <a class="dropdown-item" href="/logout">Log out</a>
@@ -538,7 +538,40 @@ h6 span{
 
       {% block body %}  {% endblock body %}
 
+{% load static %}
+<!-- Vendor -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.appear/jquery.appear.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.cookie/jquery.cookie.min.js' %}"></script>
+<script src="{% static 'vendor/popper/umd/popper.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'vendor/common/common.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.validation/jquery.validate.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.gmap/jquery.gmap.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.lazyload/jquery.lazyload.min.js' %}"></script>
+<script src="{% static 'vendor/isotope/jquery.isotope.min.js' %}"></script>
+<script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'vendor/vide/jquery.vide.min.js' %}"></script>
+<script src="{% static 'vendor/vivus/vivus.min.js' %}"></script>
 
+<!-- Theme Base, Components and Settings -->
+<script src="{% static 'js/theme.js' %}"></script>
+
+<!-- Current Page Vendor and Views -->
+<script src="{% static 'vendor/circle-flip-slideshow/js/jquery.flipshow.min.js' %}"></script>
+<script src="{% static 'js/views/view.home.js' %}"></script>
+
+<!-- Theme Custom -->
+<script src="{% static 'js/custom.js' %}"></script>
+
+<script src="{% static 'js/examples/examples.lightboxes.js' %}"></script>		
+
+
+<!-- Theme Initialization Files -->
+<script src="{% static 'js/theme.init.js' %}"></script>
       </div>
       
 
