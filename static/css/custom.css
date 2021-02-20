@@ -43,6 +43,16 @@
     .custom-title-box{
         margin-left: 4rem !important;
     }
+    .random1{
+        margin-left: 4px !important;
+        padding-left: 4px !important;
+    }
+    .random2{
+        margin-left: 4rem !important;
+    }
+    .btn-modern{
+        width: 20rem !important;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 800px) {
