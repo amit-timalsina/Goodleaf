@@ -38,7 +38,7 @@ Another major feature of the Goodleaf is it’s simple yet very informative foru
 * Git clone the Github repo
 * Install files from requirements.txt
 `pip3 install -r requirements.txt`
-* Keep all models to Goodleaf/machinelearning/model/. [Link for models](https://drive.google.com/drive/folders/1qeDUhN-yaSNZ4Ii-N0SDDHfGQE5KrBH5?usp=sharing)
+* Keep all models and csv file to Goodleaf/machinelearning/model/. [Link for models](https://drive.google.com/drive/folders/1qeDUhN-yaSNZ4Ii-N0SDDHfGQE5KrBH5?usp=sharing) //Unzip the downloaded folder from drive and go into the directory and copy all three files and paste them to location specified as above
 * Start the server by using 
 `python3 manage.py runserver`
   or   
