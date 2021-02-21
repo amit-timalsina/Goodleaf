@@ -46,6 +46,8 @@ Another major feature of the Goodleaf is it’s simple yet very informative foru
 `python manage.py runserver`
 for windows
 * Done!
+* 
+### Note: You may be required to go to Goodleaf/machinelearning/predict.py file and change first line of function predict() if you face any errors while detecting an image in web app.
 
 ## Features
 Features of Goodleaf.
